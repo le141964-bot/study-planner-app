@@ -1,7 +1,83 @@
-.nav { 
-  display: flex; 
-  gap: 20px; 
-  background: black;
-  color: white; 
-  padding: 10px; 
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #f5f6fa, #e4ecf7);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  background: #1e1e2f;
+  padding: 15px 30px;
+  align-items: center;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #00bcd4;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #1e1e2f;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+
+  min-height: 80vh;              
+  display: flex;                 
+  flex-direction: column;        
+  justify-content: center;       
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #00bcd4, #2196f3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
 }
