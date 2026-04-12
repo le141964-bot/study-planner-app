@@ -23,6 +23,10 @@ body {
   color: #00bcd4;
 }
 
+.active { 
+  border-bottom: 2px solid #00bcd4; 
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f5f6fa;

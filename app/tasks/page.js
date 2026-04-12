@@ -30,6 +30,14 @@ export default function Tasks() {
           <li key={index}>{task}</li>
         ))}
       </ul>
+      <h1>Tasks</h1>
+
+      <TaskForm addTask={addTask} />
+      <TaskList
+        tasks={tasks}
+        toggleTask={toggleTask}
+        deleteTask={deleteTask}
+      />
     </div>
   );
 }
