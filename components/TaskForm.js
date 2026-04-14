@@ -11,13 +11,14 @@ export default function TaskForm({ addTask }) {
   };
 
   return (
-    <div>
+    <div className="task-form">   
       <input
+        type="text"
+        placeholder="Enter task"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter task"
       />
-      <button onClick={handleSubmit}>Add</button>
+      <button className="btn" onClick={handleSubmit}>Add</button>
     </div>
   );
 }

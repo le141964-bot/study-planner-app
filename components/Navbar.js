@@ -7,9 +7,17 @@ export default function Navbar() {
 
   return (
     <nav className="nav">
-      <Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link>
-      <Link href="/tasks" className={pathname === "/tasks" ? "active" : ""}>Tasks</Link>
-      <Link href="/about" className={pathname === "/about" ? "active" : ""}>About</Link>
+      <Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`}>
+        <span>Home</span>
+      </Link>
+
+      <Link href="/tasks" className={`nav-link ${pathname === "/tasks" ? "active" : ""}`}>
+        <span>Tasks</span>
+      </Link>
+
+      <Link href="/about" className={`nav-link ${pathname === "/about" ? "active" : ""}`}>
+        <span>About</span>
+      </Link>
     </nav>
   );
 }

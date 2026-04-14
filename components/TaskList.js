@@ -9,7 +9,7 @@ export default function TaskList({ tasks, toggleTask, deleteTask }) {
           key={index}
           task={task}
           toggleTask={() => toggleTask(index)}
-          deleteTask={() => deleteTask(index)}  // 👈 PASS IT HERE
+          deleteTask={() => deleteTask(index)}
         />
       ))}
     </div>

@@ -1,42 +1,13 @@
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(to right, #f5f6fa, #e4ecf7);
 }
 
-.nav {
-  display: flex;
-  gap: 30px;
-  background: #1e1e2f;
-  padding: 15px 30px;
-  align-items: center;
-}
-
-.nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.nav a:hover {
-  color: #00bcd4;
-}
-
-.active { 
-  border-bottom: 2px solid #00bcd4; 
-}
-
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f5f6fa;
-  margin: 0;
-}
-
 h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 40px;
   color: #1e1e2f;
+  margin-bottom: 10px;
 }
 
 p {
@@ -44,26 +15,34 @@ p {
   font-size: 18px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-
-  min-height: 80vh;              
-  display: flex;                 
-  flex-direction: column;        
-  justify-content: center;       
+.task-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-
-.card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px 0;
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
 }
 
 .btn {
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 12px 24px;
   background: linear-gradient(135deg, #00bcd4, #2196f3);
   color: white;
@@ -80,8 +59,255 @@ p {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.card button:last-of-type {
+  background: black;
+  color: white;
+}
+
+:root {
+  --primary: #6366f1;
+  --bg: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --danger: #ef4444;
+  --success: #10b981;
+}
+[data-theme="dark"] {
+  --primary: #818cf8;  
+  --bg: #0f172a;       
+  --text-main: #f8fafc; 
+  --text-muted: #94a3b8;
+  --card-bg: #1e293b;   
+  --border: #334155;     
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.2rem;
+  background: #1e1e2f;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.nav a {
+color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+
+}
+
+.nav a:hover {
+  color: #00bcd4;
+}
+
+.active { 
+  border-bottom: 2px solid #00bcd4; 
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.layout {
+  border: black 2px solid;
+}
+
+.panel {
+  background-color: var(--bg-panel);
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-color);
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.task-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.9; }
+
+.btn-task {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  margin-left: 3px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-task:hover { opacity: 0.9; }
+
+.btn-outline {
+  transition: 0.2s;
+}
+
+.btn-outline:hover {
+  transform: translateY(-1px);
+}
+
+.new-task {
+  flex: 1;
+  padding: 6px 14px;
+  margin-left: 3px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.task-card {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transform: translateY(-1px);
+}
+
+.task-text {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.completed .task-text {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: #555;
+}
+
+.btn-action.complete:hover {
+  color: #10b981;
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.btn-action.delete:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-outline.complete:hover { color: var(--success); border-color: var(--success); }
+.btn-outline.delete:hover { color: var(--danger); border-color: var(--danger); }
+
 @media (max-width: 600px) {
   .nav {
     flex-direction: column;
+    align-items: center;
   }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;}
 }

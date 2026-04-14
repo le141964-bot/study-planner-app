@@ -4,8 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <Navbar />
-
       <div className="container">
         <h1>Welcome to Study Planner</h1>
         <p>Organize your tasks and stay productive.</p>
