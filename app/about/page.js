@@ -4,7 +4,7 @@ export default function About() {
     return ( 
         <div>
             <h1>About</h1>
-            <p>This app helps student manage tasks and stay organized</p>
+            <p>This app was created to helps student manage tasks and stay organized throughout their week.</p>
         </div>
     ); 
 }

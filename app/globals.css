@@ -30,12 +30,15 @@ p {
   overflow-y: auto;
   padding-right: 10px;
 }
+
 .task-list::-webkit-scrollbar {
   width: 6px;
 }
+
 .task-list::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .task-list::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
   border-radius: 10px;
@@ -89,6 +92,7 @@ input {
   --danger: #ef4444;
   --success: #10b981;
 }
+
 [data-theme="dark"] {
   --primary: #818cf8;  
   --bg: #0f172a;       
@@ -148,6 +152,20 @@ color: #ffffff;
   padding: 1rem 1.2rem;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
+}
+
+.task-list {
+  max-height: 300px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-list p {
+  text-align: center;
+  color: #64748b;
 }
 
 .task-form {
