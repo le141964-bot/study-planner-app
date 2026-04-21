@@ -3,7 +3,7 @@ import TaskCard from "./TaskCard";
 
 export default function TaskList({ tasks, toggleTask, deleteTask }) {
   return (
-    <div>
+    <div className="task-list">
       {tasks.map((task, index) => (
         <TaskCard
           key={index}
